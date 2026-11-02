@@ -269,13 +269,13 @@
                 locale: options.locale
             };
 
-            const response = await corsfix.fetch(WARP_API, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
+            corsfix.fetch(WARP_API, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+    });
 
             const data = await response.json();
 
