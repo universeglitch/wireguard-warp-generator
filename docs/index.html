@@ -105,7 +105,11 @@
             border-top: 1px solid var(--pico-muted-border-color);
         }
     </style>
-    <script src="https://unpkg.com/corsfix"></script>
+    <script
+    src="https://unpkg.com/corsfix"
+    onload="console.log('[Corsfix] SDK loaded:', typeof corsfix)"
+    onerror="console.error('[Corsfix] SDK failed to load')">
+    </script>
 </head>
 <body>
     <main class="container">
