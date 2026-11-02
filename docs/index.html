@@ -105,6 +105,7 @@
             border-top: 1px solid var(--pico-muted-border-color);
         }
     </style>
+    <script src="https://unpkg.com/corsfix"></script>
 </head>
 <body>
     <main class="container">
@@ -268,7 +269,7 @@
                 locale: options.locale
             };
 
-            const response = await fetch(CORS_PROXY + WARP_API, {
+            const response = await corsfix.fetch(WARP_API, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
